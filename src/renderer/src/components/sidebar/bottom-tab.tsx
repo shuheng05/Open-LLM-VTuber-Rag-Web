@@ -4,6 +4,9 @@ import { FiCamera, FiMonitor } from 'react-icons/fi'
 import { sidebarStyles } from './sidebar-styles'
 import CameraPanel from './camera-panel'
 import ScreenPanel from './screen-panel'
+import PictureDraw from "./picture-draw";
+import VannaAI from "./vanna-text2sql";
+
 
 function BottomTab(): JSX.Element {
   return (
@@ -21,6 +24,13 @@ function BottomTab(): JSX.Element {
           <FiMonitor />
           Screen
         </Tabs.Trigger>
+
+        <PictureDraw/>
+
+        <VannaAI/>
+
+
+
       </Tabs.List>
 
       <Tabs.Content value="camera">

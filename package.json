@@ -31,6 +31,7 @@
     "@electron-toolkit/utils": "^3.0.0",
     "@emotion/react": "^11.14.0",
     "@ricky0123/vad-web": "^0.0.22",
+    "antd": "^5.24.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",

@@ -14,6 +14,18 @@ const createConfig = (outDir: string) => ({
   base: './',
   server: {
     port: 3000,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000', // Flask、Node、等 TTS 配置服务
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+      '/voice': {
+        target: 'http://172.31.0.203:9885', // GPT-SoVITS 后端服务
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/voice/, ''),
+      },
+    },
   },
   build: {
     outDir: path.join(__dirname, outDir),

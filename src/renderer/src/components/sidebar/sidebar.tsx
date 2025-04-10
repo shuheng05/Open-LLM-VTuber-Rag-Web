@@ -11,6 +11,7 @@ import BottomTab from './bottom-tab';
 import HistoryDrawer from './history-drawer';
 import { useSidebar } from '@/hooks/sidebar/use-sidebar';
 import GroupDrawer from './group-drawer';
+import ChangeSpeech from "./change-speech";
 
 // Type definitions
 interface SidebarProps {
@@ -62,6 +63,9 @@ const HeaderButtons = memo(({ onSettingsOpen, onNewHistory }: HeaderButtonsProps
     <Button onClick={onNewHistory}>
       <FiPlus />
     </Button>
+    <ChangeSpeech/>
+
+
   </Box>
 ));
 
